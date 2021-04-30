@@ -7,12 +7,35 @@ body{
     text-align: center;
     background-position: center;
     line-height: 10px;
-    -webkit-text-size-adjust: 100%;
 }
 
 h3 {
     font-size: 45px;
 }
+
+/*　見出し線
+--------------------------------*/
+.heading {
+    display: flex;
+    align-items: center;
+}
+
+.heading:before,
+.heading:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    background-color: #B8E1EC;
+}
+
+.heading:before {
+    margin-right: 4rem;
+}
+
+.heading:after {
+    margin-left: 4rem;
+}
+
 
 /*　ヘッダー
 --------------------------------*/
@@ -28,8 +51,8 @@ header{
 #nav {
     position: absolute;
     top: 0;
-    right:-40%;
-    width: 40%;
+    right:-20%;
+    width: 20%;
     height: 100vh;
     background: #ffffff;
     transition: .7s;
@@ -39,7 +62,8 @@ header{
 }
 #nav ul li{
     list-style-type: none;
-    font-size: 20px;
+    font-size: 35px;
+    line-height: 50px;
 }
 #nav a{
     text-decoration: none;
@@ -56,19 +80,19 @@ a {
     text-decoration: none;
   }
   
-a:after {
+#nav ul a:after {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: #B8E1EC;
     transform: translate(-100%, 0);
     transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
     content: "";
   }
   
-a:hover:after {
+#nav ul a:hover:after {
     transform: translate(0, 0);
   }
 
@@ -122,84 +146,65 @@ a:hover:after {
 
 /*　メイン
 --------------------------------*/
-.home_main {
+#home_main {
     position: relative;
     width: 100%;
+    height: 100vh;
     z-index: 1;
+    margin-bottom: 250px;
 }
 .main p {
     position: absolute;
     color: white;
-    font-size: 4.5vh;
-    font-weight: bold;
+    font-family:'Orelega One', 'cursive';
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 45px;
+    /* font-weight: bold; */
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    margin: 0;
-    padding: 0;
 }
 .main img {
     width: 100%;
-    background-size: cover;
+    /* background-size: auto; */
 }
 
 /*　About (自己紹介）
 --------------------------------*/
-.about {
-    margin: 150px;
+#about {
+    padding-top: 50px;
+    margin-top: -50px;
+    height: 800px;
 }
-
 .about_img {
-    width: 20%;
+    width: 250px;
     border-radius: 50%;
-    /* background-position: center; */
     padding: 40px;
 }
 .icon{
-    width: 5%;
-    padding: 10px;
-
-
-
+    width: 60px;
+    margin: 20px;
 }
 
 /* Strenghs (強み）
 --------------------------------*/
-.strengths {
-    /* background-color: antiquewhite; */
-    position: relative;
-    margin: 60px;
+#strengths {
+    padding-top: 50px;
+    margin-top: -50px;
 }
-.strengths1{
+.strengths {
     display: flex;
     justify-content: space-evenly;
     margin-top: 90px;
 }
-.strengths_img1{
+.strengths_img{
     width: 35%;
     height: 35%;
 }
 .section1 {
     display: block;
-    /* background-color: burlywood; */
-    margin: 60px;
-    text-align: left;
-    padding: 50px;
 }
-
-.strengths2{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 150px;
-}
-.strengths_img2{
-    width: 35%;
-    height: 35%;
-}
-.section2 {
-    /* display: block; */
+.section1,.section2 {
     margin: 60px;
     text-align: left;
     padding: 50px;
@@ -216,9 +221,7 @@ a:hover:after {
 /* スキル
 --------------------------------*/
 #skills{
-    margin: 60px;
-    padding: 20px;
-    /* background-color: darkolivegreen;*/
+    margin-top: 100px;
 }
 .skills_group{
     margin-top: 80px;
@@ -228,7 +231,9 @@ a:hover:after {
     font-weight: bold;
 }
 
-
+.unit1,.unit2,.unit3{
+    padding: 10px;
+}
 
 /* フッター
 --------------------------------*/
